@@ -1,6 +1,5 @@
 import { Link } from "react-scroll";
 import styled from "styled-components";
-import mailLogo from "../../Images/mail.png";
 
 export const HomeContainer = styled.div`
   width: 100%;
@@ -63,14 +62,6 @@ export const IntroP1 = styled.p`
   @media (min-width: 320px) and (max-width: 480px) {
     font-size: 20px;
   }
-`;
-
-export const MailLogo = styled.div`
-  background-image: url(${mailLogo});
-  background-repeat: no-repeat;
-  width: 28px;
-  height: 28px;
-  padding-right: 10px;
 `;
 
 export const HelloButton = styled(Link)`

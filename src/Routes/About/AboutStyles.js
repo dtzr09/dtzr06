@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import rightarrowLogo from "../../Images/right-arrow.png";
-import luffy from "../../Images/luffy.png";
+import profileImg from "../../static/profileImg.png";
 
 export const AboutWrapper = styled.div`
   width: 100vw;
@@ -103,10 +102,11 @@ export const PicContainer = styled.div`
 `;
 
 export const SelfImage = styled.div`
-  background-image: url(${luffy});
+  background-image: url(${profileImg});
   background-repeat: no-repeat;
-  width: 280px;
-  height: 280px;
+  background-position: center 30%;
+  width: 300px;
+  height: 300px;
 
   @media (min-width: 320px) and (max-width: 480px) {
     width: 150px;
@@ -128,7 +128,7 @@ export const LanguageTitle = styled.div`
 
 export const LanguagesContainer = styled.div`
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   padding-top: 20px;
   align-items: center;
   color: #c3c5bc;
@@ -151,12 +151,4 @@ export const LanguageContainer = styled.div`
     font-size: 18px;
     padding: 0 22px;
   }
-`;
-
-export const RightArrowLogo = styled.div`
-  background-image: url(${rightarrowLogo});
-  width: 34px;
-  height: 34px;
-  color: #aa475c;
-  padding-right: 6px;
 `;

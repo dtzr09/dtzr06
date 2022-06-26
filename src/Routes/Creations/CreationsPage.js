@@ -8,7 +8,6 @@ import {
   CardsContainer,
   Card,
   LogosContainer,
-  FolderLogo,
   MainLogo,
   GithubLogo,
   LiveLogo,
@@ -21,24 +20,26 @@ import {
 
 import { VscGithubAlt as Github } from "react-icons/vsc";
 import { IconContext } from "react-icons";
-
+import { MdWifiTethering } from "react-icons/md";
+import { SiCountingworkspro } from "react-icons/si";
 function CreationsPage() {
   const cards = [
     {
       key: 1,
       name: "Bird Encyclopedia",
-      details: "An encyclopedia that uses the CRUD system.",
-      langauge: "Reactjs, HTML, CSS, Javascript",
-      url: "https://birdex.herokuapp.com/",
+      details:
+        "An encyclopedia that uses the CRUD framework with Redux library",
+      langauge: "React.js, React-redux HTML, CSS, Javascript",
+      url: "birdex.herokuapp.com/",
       source: "github.com/dtzr09/birdex",
     },
     {
       key: 2,
       name: "Netflix Clone",
       details: "A clone of Netflix implemented with Stripe and Firebase",
-      langauge: "Reactjs, HTML, CSS, Javascript, Stripe, Firebase",
-      url: "https://netflix2-clone-e95d8.web.app/",
-      source: "github.com/dtzr09/birdex",
+      langauge: "React.js, HTML, CSS, Javascript, Stripe, Firebase",
+      url: "netflix2-clone-e95d8.web.app/",
+      source: "github.com/dtzr09/netflix-clone",
     },
   ];
 
@@ -57,22 +58,23 @@ function CreationsPage() {
                   <IconContext.Provider
                     value={{
                       style: {
-                        width: "26px",
-                        height: "26px",
+                        width: "25px",
+                        height: "25px",
                         backgroundColor: "transparent",
                       },
                     }}
                   >
-                    <FolderLogo />
+                    <SiCountingworkspro style={{ color: "white" }} />
                     <MainLogo>
                       <GithubLogo to={`//${card.source}`} target="_blank">
                         <Github />
                       </GithubLogo>
                       {card.url ? (
-                        <LiveLogo
-                          to={`//${card.url}`}
-                          target="_blank"
-                        ></LiveLogo>
+                        <LiveLogo to={`//${card.url}`} target="_blank">
+                          <MdWifiTethering
+                            style={{ color: "white", marginLeft: "5px" }}
+                          />
+                        </LiveLogo>
                       ) : null}
                     </MainLogo>
                   </IconContext.Provider>

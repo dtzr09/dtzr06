@@ -1,6 +1,6 @@
 import React from "react";
 import { ResumeButton } from "./ResumeStyles";
-import cv_file from '../../Files/cv.pdf'
+import cv_file from "../../static/cv.pdf";
 function Resume() {
   return (
     <>

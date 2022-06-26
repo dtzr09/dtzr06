@@ -1,13 +1,10 @@
 import styled from "styled-components";
-import folderLogo from "../../Images/folder.png";
-import broadcastLogo from "../../Images/broadcast.png";
 import { Link } from "react-router-dom";
 
 export const CreationWrapper = styled.div`
   width: 100vw;
-  min-height: 100%;
-  max-height: fit-content;
-
+  min-height: 100vh;
+  max-height: 100%;
   @media (min-width: 320px) and (max-width: 480px) {
     height: fit-content;
   }
@@ -74,8 +71,8 @@ export const CardsContainer = styled.div`
 `;
 
 export const Card = styled.div`
-  width: 240px;
-  height: 270px;
+  width: 260px;
+  height: 300px;
   border-radius: 15px;
   background-color: #2a3853;
   padding: 30px;
@@ -85,7 +82,7 @@ export const Card = styled.div`
 
   &:hover {
     background-color: #36496d;
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
   }
 
   @media (min-width: 320px) and (max-width: 480px) {
@@ -103,19 +100,9 @@ export const LogosContainer = styled.div`
   background-color: transparent;
 `;
 
-export const FolderLogo = styled.div`
-  background-image: url(${folderLogo});
-  background-repeat: no-repeat;
-  width: 34px;
-  height: 34px;
-  background-color: transparent;
-`;
-
 export const MainLogo = styled.div`
-  width: 28%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   background-color: transparent;
 `;
@@ -129,7 +116,6 @@ export const GithubLogo = styled(Link)`
 `;
 
 export const LiveLogo = styled(Link)`
-  background-image: url(${broadcastLogo});
   background-repeat: no-repeat;
   width: 29px;
   height: 30px;
@@ -139,12 +125,14 @@ export const LiveLogo = styled(Link)`
 
 export const DetailsContainer = styled.div`
   margin-top: 10px;
+  height: 100%;
   background-color: transparent;
+  position: relative;
 `;
 
 export const Title = styled.p`
   font-size: 32px;
-  color: #e0e1dc;
+  color: rgba(79, 128, 224, 0.55);
   background-color: transparent;
   font-weight: bold;
 
@@ -154,6 +142,8 @@ export const Title = styled.p`
 `;
 export const Details = styled.p`
   background-color: transparent;
+  height: 80px;
+  max-height: 120px;
   line-height: 1.5;
   font-size: 18px;
   color: #c3c5bc;
@@ -165,15 +155,17 @@ export const Details = styled.p`
 
 export const LanguagesContainer = styled.div`
   width: 100%;
-  height: fit-content;
   background-color: transparent;
   position: absolute;
   bottom: 10%;
 `;
+
 export const Languages = styled.p`
   background-color: transparent;
   color: #c3c5bc;
   font-size: 16px;
+  margin-top: 20px;
+  line-height: 1.5;
 
   @media (min-width: 320px) and (max-width: 480px) {
     font-size: 12px;

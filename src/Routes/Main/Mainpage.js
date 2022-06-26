@@ -7,7 +7,6 @@ import {
   TitleSpan,
   IntroP1,
   HelloButton,
-  MailLogo,
 } from "./MainStyles";
 import Typical from "react-typical";
 import Nav from "../../Components/Navbar/Nav.js";

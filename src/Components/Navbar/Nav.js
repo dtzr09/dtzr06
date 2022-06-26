@@ -14,7 +14,6 @@ import { GrInstagram as Instagram } from "react-icons/gr";
 import { IconContext } from "react-icons";
 
 function Nav() {
-
   return (
     <NavContainer>
       <HomeLink to="/" smooth={true} duration={800} spy={true} exact="true">
@@ -58,10 +57,7 @@ function Nav() {
           <LogoWrapper to={`//www.linkedin.com/in/derrick-tay`} target="_blank">
             <Linkedin />
           </LogoWrapper>
-          <LogoWrapper
-            to={`//https://www.instagram.com/dtzr_/`}
-            target="_blank"
-          >
+          <LogoWrapper to={`//www.instagram.com/dtzr_/`} target="_blank">
             <Instagram />
           </LogoWrapper>
         </LogosContainer>

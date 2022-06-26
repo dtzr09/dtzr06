@@ -13,7 +13,7 @@ export const ContactWrapper = styled.div`
   display: flex;
   flex-direction: column;
   height: 700px;
-  width: 600px;
+  width: 50%;
   padding: 20px 30px;
   margin-left: auto;
   margin-right: auto;
@@ -59,7 +59,6 @@ export const ContainerTwo = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  max-width: 100%;
 `;
 
 export const InputBox = styled.div`
@@ -80,11 +79,11 @@ export const InputBox = styled.div`
 
 export const NameInput = styled.input`
   color: #fff;
-  font-size: 20px;
+  font-size: 22px;
   width: 100%;
-  border: 1.5px solid #aa475c;
+  border: 2px solid #aa475c;
   border-radius: 8px;
-  height: 26px;
+  height: 35px;
   outline: none;
   padding: 2px 8px;
   box-sizing: border-box;
@@ -123,12 +122,14 @@ export const MessageInput = styled.textarea`
   min-height: 290px;
   resize: none;
   color: #fff;
-  font-size: 20px;
+  font-size: 22px;
   border-radius: 8px;
   height: 26px;
-  border-color: #aa475c;
+  border: 2px solid #aa475c;
   outline: none;
   padding: 2px 8px;
+  box-sizing: border-box;
+
   -webkit-text-fill-color: #c3c5bc;
 
   &:focus {
