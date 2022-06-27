@@ -35,7 +35,7 @@ function CreationsPage() {
       details:
         "An encyclopedia that uses the CRUD framework with Redux library",
       langauge: "React.js, React-redux HTML, CSS, Javascript",
-      url: "birdex.herokuapp.com/",
+      url: "dtzr09.github.io/birdex-redux/",
       source: "github.com/dtzr09/birdex",
       photos: ["birdex/0.mp4", "birdex/2.png", "birdex/3.png", "birdex/4.png"],
     },
