@@ -62,8 +62,8 @@ export const Titlespan = styled.div`
 
 export const SliderContainer = styled.div`
   position: absolute;
-  height: 650px;
-  width: 80%;
+  height: 800px;
+  width: 95%;
   display: flex;
   flex-direction: column;
 `;

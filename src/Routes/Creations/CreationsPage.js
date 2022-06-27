@@ -37,12 +37,7 @@ function CreationsPage() {
       langauge: "React.js, React-redux HTML, CSS, Javascript",
       url: "birdex.herokuapp.com/",
       source: "github.com/dtzr09/birdex",
-      photos: [
-        "birdex/Monterey_Graphic.jpg",
-        "birdex/test1.jpg",
-        "birdex/test2.jpg",
-        "birdex/test3.png",
-      ],
+      photos: ["birdex/0.mp4", "birdex/2.png", "birdex/3.png", "birdex/4.png"],
     },
     {
       key: 2,

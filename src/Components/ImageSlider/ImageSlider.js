@@ -23,7 +23,10 @@ function ImageSlider({ card }) {
           <input type="radio" name="radio-btn" id="radio3" />
           <input type="radio" name="radio-btn" id="radio4" />
           <div className="slide first">
-            <img src={BASE_URL + photos[0]} alt="" />
+            <video loop autoplay muted controls width="100%">
+              <source src={BASE_URL + photos[0]} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
           {renderCards}
         </div>
