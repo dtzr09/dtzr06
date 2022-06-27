@@ -1,37 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   CreationWrapper,
   CreationContainer,
   TitleWrapper,
   TitleH1,
   Titlespan,
-  CardsContainer,
-  Card,
   LogosContainer,
-  MainLogo,
+  SliderContainer,
+  Card,
   GithubLogo,
   LiveLogo,
+  CardTitle,
+  CardDetails,
+  CardLanguage,
   DetailsContainer,
-  Title,
-  Details,
-  LanguagesContainer,
-  Languages,
+  NavigationLogo,
+  LeftContainer,
+  RightContainer,
+  InfoContainer,
+  CardContainer,
 } from "./CreationsStyle";
 
 import { VscGithubAlt as Github } from "react-icons/vsc";
-import { IconContext } from "react-icons";
 import { MdWifiTethering } from "react-icons/md";
-import { SiCountingworkspro } from "react-icons/si";
+import ImageSlider from "../../Components/ImageSlider/ImageSlider";
+import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
 function CreationsPage() {
+  const [cardKey, setcardKey] = useState(1);
+
   const cards = [
     {
       key: 1,
-      name: "Bird Encyclopedia",
+      name: "Birdex",
       details:
         "An encyclopedia that uses the CRUD framework with Redux library",
       langauge: "React.js, React-redux HTML, CSS, Javascript",
       url: "birdex.herokuapp.com/",
       source: "github.com/dtzr09/birdex",
+      photos: [
+        "birdex/Monterey_Graphic.jpg",
+        "birdex/test1.jpg",
+        "birdex/test2.jpg",
+        "birdex/test3.png",
+      ],
     },
     {
       key: 2,
@@ -40,8 +51,65 @@ function CreationsPage() {
       langauge: "React.js, HTML, CSS, Javascript, Stripe, Firebase",
       url: "netflix2-clone-e95d8.web.app/",
       source: "github.com/dtzr09/netflix-clone",
+      photos: [
+        "netflix/test4.jpg",
+        "netflix/test5.jpg",
+        "netflix/test6.jpg",
+        "netflix/test7.png",
+      ],
     },
   ];
+
+  const handleNavigation = (data) => {
+    switch (data) {
+      case "left":
+        if (cardKey > cards.length) {
+          setcardKey(1);
+        } else {
+          setcardKey(cardKey + 1);
+        }
+      case "right":
+        if (cardKey == 1) {
+          setcardKey(cards.length);
+        } else {
+          setcardKey(cardKey - 1);
+        }
+      default:
+        break;
+    }
+  };
+
+  const renderCards = () => {
+    const currentCard = cards[cardKey - 1];
+
+    return (
+      <CardContainer>
+        <Card>
+          <CardTitle>{currentCard.name}</CardTitle>
+          <DetailsContainer>
+            <CardDetails>{currentCard.details}</CardDetails>
+            <CardLanguage>Tech Stack: {currentCard.langauge} </CardLanguage>
+          </DetailsContainer>
+          <LogosContainer>
+            <GithubLogo to={`//${currentCard.source}`} target="_blank">
+              <Github />
+            </GithubLogo>
+            <LiveLogo to={`//${currentCard.url}`} target="_blank">
+              <MdWifiTethering />
+            </LiveLogo>
+          </LogosContainer>
+          <NavigationLogo>
+            <LeftContainer onClick={() => handleNavigation("left")}>
+              <AiFillCaretLeft />
+            </LeftContainer>
+            <RightContainer onClick={() => handleNavigation("right")}>
+              <AiFillCaretRight />
+            </RightContainer>
+          </NavigationLogo>
+        </Card>
+      </CardContainer>
+    );
+  };
 
   return (
     <CreationWrapper id="creations">
@@ -50,46 +118,10 @@ function CreationsPage() {
           <TitleH1>/ creations</TitleH1>
           <Titlespan />
         </TitleWrapper>
-        <CardsContainer>
-          {cards.map((card) => {
-            return (
-              <Card key={card.key}>
-                <LogosContainer>
-                  <IconContext.Provider
-                    value={{
-                      style: {
-                        width: "25px",
-                        height: "25px",
-                        backgroundColor: "transparent",
-                      },
-                    }}
-                  >
-                    <SiCountingworkspro style={{ color: "white" }} />
-                    <MainLogo>
-                      <GithubLogo to={`//${card.source}`} target="_blank">
-                        <Github />
-                      </GithubLogo>
-                      {card.url ? (
-                        <LiveLogo to={`//${card.url}`} target="_blank">
-                          <MdWifiTethering
-                            style={{ color: "white", marginLeft: "5px" }}
-                          />
-                        </LiveLogo>
-                      ) : null}
-                    </MainLogo>
-                  </IconContext.Provider>
-                </LogosContainer>
-                <DetailsContainer>
-                  <Title>{card.name}</Title>
-                  <Details>{card.details}</Details>
-                  <LanguagesContainer>
-                    <Languages>{card.langauge}</Languages>
-                  </LanguagesContainer>
-                </DetailsContainer>
-              </Card>
-            );
-          })}
-        </CardsContainer>
+        <SliderContainer>
+          <ImageSlider card={cards[cardKey - 1]} />
+          <InfoContainer> {renderCards()} </InfoContainer>
+        </SliderContainer>
       </CreationContainer>
     </CreationWrapper>
   );

@@ -3,18 +3,20 @@ import { Link } from "react-router-dom";
 
 export const CreationWrapper = styled.div`
   width: 100vw;
-  min-height: 100vh;
-  max-height: 100%;
+  height: 125vh;
+  min-height: 100%;
+
   @media (min-width: 320px) and (max-width: 480px) {
     height: fit-content;
   }
 `;
 
 export const CreationContainer = styled.div`
-  width: 600px;
+  width: 60%;
   height: 100%;
   padding-top: 8%;
   padding-left: 15%;
+  position: relative;
 
   @media (min-width: 320px) and (max-width: 480px) {
     padding-top: 0px;
@@ -58,116 +60,101 @@ export const Titlespan = styled.div`
   }
 `;
 
-export const CardsContainer = styled.div`
-  margin-top: 10px;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 10px;
-
-  @media (min-width: 320px) and (max-width: 480px) {
-    display: flex;
-    flex-direction: column;
-  }
+export const SliderContainer = styled.div`
+  position: absolute;
+  height: 650px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const Card = styled.div`
-  width: 260px;
-  height: 300px;
-  border-radius: 15px;
-  background-color: #2a3853;
-  padding: 30px;
-  position: relative;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+`;
 
-  &:hover {
-    background-color: #36496d;
-    transition: 0.3s ease-in-out;
-  }
+export const DetailsContainer = styled.div`
+  line-height: 1.8;
+`;
 
-  @media (min-width: 320px) and (max-width: 480px) {
-    width: 200px;
-    height: 160px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-  }
+export const CardContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  position: relative;
+`;
+
+export const InfoContainer = styled.div`
+  width: 100%;
+  margin-top: 35px;
+  background-color: rgba(46, 57, 79, 0.5);
+  border-radius: 0px 0px 15px 15px;
+`;
+
+export const CardTitle = styled.p`
+  font-size: 40px;
+`;
+
+export const CardDetails = styled.p`
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.85);
+`;
+
+export const CardLanguage = styled.div`
+  width: 100%;
+  font-size: 18px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.7);
 `;
 
 export const LogosContainer = styled.div`
+  padding-top: 18px;
+  font-size: 25px;
+  width: 10%;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
-  justify-content: space-between;
-  background-color: transparent;
-`;
-
-export const MainLogo = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background-color: transparent;
+  justify-content: space-around;
 `;
 
 export const GithubLogo = styled(Link)`
-  width: 29px;
-  height: 30px;
   cursor: pointer;
-  background-color: transparent;
   color: #fff;
 `;
 
 export const LiveLogo = styled(Link)`
-  background-repeat: no-repeat;
-  width: 29px;
-  height: 30px;
   cursor: pointer;
-  background-color: transparent;
+  color: #fff;
 `;
 
-export const DetailsContainer = styled.div`
-  margin-top: 10px;
-  height: 100%;
-  background-color: transparent;
-  position: relative;
-`;
-
-export const Title = styled.p`
-  font-size: 32px;
-  color: rgba(79, 128, 224, 0.55);
-  background-color: transparent;
-  font-weight: bold;
-
-  @media (min-width: 320px) and (max-width: 480px) {
-    font-size: 18px;
-  }
-`;
-export const Details = styled.p`
-  background-color: transparent;
-  height: 80px;
-  max-height: 120px;
-  line-height: 1.5;
-  font-size: 18px;
-  color: #c3c5bc;
-
-  @media (min-width: 320px) and (max-width: 480px) {
-    font-size: 15px;
-  }
-`;
-
-export const LanguagesContainer = styled.div`
-  width: 100%;
-  background-color: transparent;
+export const NavigationLogo = styled.div`
+  width: 95%;
+  align-items: center;
+  text-align: center;
   position: absolute;
-  bottom: 10%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 32px;
+  cursor: pointer;
+  left: 2.5%;
+  right: 2.5%;
+  bottom: 30%;
+  color: rgba(255, 255, 255, 0.7);
 `;
 
-export const Languages = styled.p`
-  background-color: transparent;
-  color: #c3c5bc;
-  font-size: 16px;
-  margin-top: 20px;
-  line-height: 1.5;
-
-  @media (min-width: 320px) and (max-width: 480px) {
-    font-size: 12px;
+export const LeftContainer = styled.div`
+  &:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+`;
+export const RightContainer = styled.div`
+  &:hover {
+    color: rgba(255, 255, 255, 1);
   }
 `;

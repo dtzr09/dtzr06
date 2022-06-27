@@ -7,8 +7,8 @@ import MainPage from "../Routes/Main/Mainpage";
 
 function Home() {
   return (
-    <div style={{ overflow: "hidden"}}>
-      <MainPage/>
+    <div style={{ overflow: "hidden", backgroundColor: "#1d2638" }}>
+      <MainPage />
       <AboutPage />
       <CreationsPage />
       <ContactPage />

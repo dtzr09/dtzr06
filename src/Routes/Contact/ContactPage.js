@@ -21,7 +21,7 @@ function ContactPage() {
       <ContactContainer id="contact">
         <ContactWrapper>
           <ContactTitle>
-            <ContactSpan /> Get in Touch! <ContactSpan />
+            <ContactSpan /> Let's Connect ! <ContactSpan />
           </ContactTitle>
           <ContainerTwo>
             <InputBox>

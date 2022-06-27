@@ -10,14 +10,12 @@ import {
 } from "./MainStyles";
 import Typical from "react-typical";
 import Nav from "../../Components/Navbar/Nav.js";
-import Resume from "../../Components/Resume/Resume";
 import { FiMail as Mail } from "react-icons/fi";
 import { IconContext } from "react-icons";
 
 function Mainpage() {
   return (
     <>
-      <Resume />
       <HomeContainer id="/">
         <DetailsContainer>
           <TitlesWrapper>
@@ -31,7 +29,7 @@ function Mainpage() {
               loop={Infinity}
               wrapper="b"
               steps={[
-                " create stuff sometimes.",
+                " love challenges.",
                 2000,
                 "'m a self-taught website developer.",
                 2000,
@@ -55,7 +53,7 @@ function Mainpage() {
               exact="true"
             >
               <Mail />
-              Talk to me!
+              Reach out to me!
             </HelloButton>
           </IconContext.Provider>
         </DetailsContainer>

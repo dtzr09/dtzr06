@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ContactContainer = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: 100%;
 
   @media (min-width: 320px) and (max-width: 480px) {
     height: 100%;
@@ -29,7 +29,7 @@ export const ContactWrapper = styled.div`
 
 export const ContactSpan = styled.div`
   height: 5px;
-  width: 15%;
+  width: 20%;
   margin: 0 25px;
   background-color: #aa475c;
   border-radius: 70%;
@@ -43,7 +43,7 @@ export const ContactSpan = styled.div`
 export const ContactTitle = styled.p`
   margin-bottom: 10px;
   display: flex;
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 500;
   color: #e0e1dc;
   justify-content: center;
@@ -78,14 +78,16 @@ export const InputBox = styled.div`
 `;
 
 export const NameInput = styled.input`
+  font-family: monospace;
   color: #fff;
-  font-size: 22px;
+  font-size: 18px;
   width: 100%;
+  background-color: transparent;
   border: 2px solid #aa475c;
   border-radius: 8px;
-  height: 35px;
+  height: 40px;
   outline: none;
-  padding: 2px 8px;
+  padding: 12px;
   box-sizing: border-box;
   autofill: none;
 
@@ -118,17 +120,19 @@ export const PhoneInput = styled(NameInput)``;
 export const EmailInput = styled(NameInput)``;
 
 export const MessageInput = styled.textarea`
+  font-family: monospace;
   width: 100%;
   min-height: 290px;
   resize: none;
   color: #fff;
-  font-size: 22px;
+  font-size: 20px;
   border-radius: 8px;
   height: 26px;
   border: 2px solid #aa475c;
   outline: none;
-  padding: 2px 8px;
+  padding: 12px;
   box-sizing: border-box;
+  background-color: transparent;
 
   -webkit-text-fill-color: #c3c5bc;
 
