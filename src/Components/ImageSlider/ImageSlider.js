@@ -6,9 +6,10 @@ function ImageSlider({ card }) {
 
   const photos = card.photos;
 
-  const renderCards = photos.slice(1, photos.length).map((photo) => {
+  const renderCards = photos.slice(1, photos.length).map((photo, index) => {
+
     return (
-      <div className="slide">
+      <div className="slide" key={index}>
         <img src={BASE_URL + photo} alt="" />
       </div>
     );
@@ -23,7 +24,7 @@ function ImageSlider({ card }) {
           <input type="radio" name="radio-btn" id="radio3" />
           <input type="radio" name="radio-btn" id="radio4" />
           <div className="slide first">
-            <video loop autoplay muted controls width="100%">
+            <video loop autoPlay muted width="100%">
               <source src={BASE_URL + photos[0]} type="video/mp4" />
               Your browser does not support the video tag.
             </video>

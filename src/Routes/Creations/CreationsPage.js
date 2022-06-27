@@ -48,9 +48,9 @@ function CreationsPage() {
       source: "github.com/dtzr09/netflix-clone",
       photos: [
         "netflix/test4.jpg",
-        "netflix/test5.jpg",
-        "netflix/test6.jpg",
-        "netflix/test7.png",
+        "netflix/1.png",
+        "netflix/2.png",
+        "netflix/3.png",
       ],
     },
   ];
