@@ -96,8 +96,10 @@ function AboutPage() {
           {techList.map((item) => {
             return (
               <LanguageContainer>
-                <AiOutlineDoubleRight style={languageStyle} /> {item.language}{" "}
-                <br />
+                <AiOutlineDoubleRight
+                  style={languageStyle}
+                />
+                {item.language} <br />
               </LanguageContainer>
             );
           })}

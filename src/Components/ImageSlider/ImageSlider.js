@@ -1,16 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./ImageSlider.css";
 
 function ImageSlider({ card }) {
   const BASE_URL = "/dtzr06/images/";
-
+  const videoRef = useRef();
   const photos = card.photos;
+  const file_name = card.file_name;
+  const videoURL = BASE_URL + file_name + photos[0];
+
+  useEffect(() => {
+    videoRef.current?.load();
+  }, [videoURL]);
 
   const renderCards = photos.slice(1, photos.length).map((photo, index) => {
-
     return (
       <div className="slide" key={index}>
-        <img src={BASE_URL + photo} alt="" />
+        <img src={BASE_URL + file_name + photo} alt="" />
       </div>
     );
   });
@@ -24,8 +29,8 @@ function ImageSlider({ card }) {
           <input type="radio" name="radio-btn" id="radio3" />
           <input type="radio" name="radio-btn" id="radio4" />
           <div className="slide first">
-            <video loop autoPlay muted width="100%">
-              <source src={BASE_URL + photos[0]} type="video/mp4" />
+            <video key={videoURL} loop autoPlay muted width="100%">
+              <source src={videoURL} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   CreationWrapper,
   CreationContainer,
@@ -26,8 +26,6 @@ import { MdWifiTethering } from "react-icons/md";
 import ImageSlider from "../../Components/ImageSlider/ImageSlider";
 import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
 function CreationsPage() {
-  const [cardKey, setcardKey] = useState(1);
-
   const cards = [
     {
       key: 1,
@@ -37,7 +35,8 @@ function CreationsPage() {
       langauge: "React.js, React-redux HTML, CSS, Javascript",
       url: "dtzr09.github.io/birdex-redux/",
       source: "github.com/dtzr09/birdex",
-      photos: ["birdex/0.mp4", "birdex/2.png", "birdex/3.png", "birdex/4.png"],
+      file_name: "birdex/",
+      photos: ["0.mp4", "2.png", "3.png", "4.png"],
     },
     {
       key: 2,
@@ -46,14 +45,18 @@ function CreationsPage() {
       langauge: "React.js, HTML, CSS, Javascript, Stripe, Firebase",
       url: "netflix2-clone-e95d8.web.app/",
       source: "github.com/dtzr09/netflix-clone",
+      file_name: "netflix/",
+
       photos: [
-        "netflix/test4.jpg",
-        "netflix/1.png",
-        "netflix/2.png",
-        "netflix/3.png",
+        "0.mp4",
+        "1.png",
+        "2.png",
+        "3.png",
       ],
     },
   ];
+
+  const [cardKey, setcardKey] = useState(1);
 
   const handleNavigation = (data) => {
     switch (data) {
@@ -94,10 +97,18 @@ function CreationsPage() {
             </LiveLogo>
           </LogosContainer>
           <NavigationLogo>
-            <LeftContainer onClick={() => handleNavigation("left")}>
+            <LeftContainer
+              onClick={() => {
+                handleNavigation("left");
+              }}
+            >
               <AiFillCaretLeft />
             </LeftContainer>
-            <RightContainer onClick={() => handleNavigation("right")}>
+            <RightContainer
+              onClick={() => {
+                handleNavigation("right");
+              }}
+            >
               <AiFillCaretRight />
             </RightContainer>
           </NavigationLogo>

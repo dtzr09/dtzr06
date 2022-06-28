@@ -4,6 +4,10 @@ export const FooterContainer = styled.div`
   width: 100%;
   height: 150px;
   z-index: -1;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    height: 100px;
+  }
 `;
 
 export const FooterWrapper = styled.div`
@@ -24,6 +28,6 @@ export const FooterDetails = styled.div`
   color: #c3c5bc;
 
   @media (min-width: 320px) and (max-width: 480px) {
-    font-size: 10px;
+    font-size: 7px;
   }
 `;

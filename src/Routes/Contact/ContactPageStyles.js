@@ -3,10 +3,6 @@ import styled from "styled-components";
 export const ContactContainer = styled.div`
   width: 100vw;
   height: 100%;
-
-  @media (min-width: 320px) and (max-width: 480px) {
-    height: 100%;
-  }
 `;
 
 export const ContactWrapper = styled.div`
@@ -23,6 +19,7 @@ export const ContactWrapper = styled.div`
   @media (min-width: 320px) and (max-width: 480px) {
     padding: 0;
     width: 100%;
+    height: 100%;
     justify-content: center;
   }
 `;
@@ -51,7 +48,7 @@ export const ContactTitle = styled.p`
   text-align: center;
 
   @media (min-width: 320px) and (max-width: 480px) {
-    font-size: 35px;
+    font-size: 30px;
   }
 `;
 
@@ -72,7 +69,7 @@ export const InputBox = styled.div`
   box-sizing: border-box;
 
   @media (min-width: 320px) and (max-width: 480px) {
-    font-size: 15px;
+    font-size: 12px;
     padding: 15px;
   }
 `;
@@ -109,7 +106,8 @@ export const NameInput = styled.input`
   }
 
   @media (min-width: 320px) and (max-width: 480px) {
-    height: 22px;
+    height: 12px;
+    font-size: 10px;
     border: 1px solid #aa475c;
     box-sizing: border-box;
   }
@@ -122,7 +120,8 @@ export const EmailInput = styled(NameInput)``;
 export const MessageInput = styled.textarea`
   font-family: monospace;
   width: 100%;
-  min-height: 290px;
+  height: 290px;
+  min-height: 200px;
   resize: none;
   color: #fff;
   font-size: 20px;
@@ -142,7 +141,10 @@ export const MessageInput = styled.textarea`
 
   @media (min-width: 320px) and (max-width: 480px) {
     border: 1px solid #aa475c;
+    height: 12px;
+    font-size: 10px;
     box-sizing: border-box;
+    height: 200px;
   }
 `;
 

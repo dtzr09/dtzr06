@@ -78,3 +78,9 @@
 #radio4:checked ~ .first {
   margin-left: -60%;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .container {
+    display: none;
+  }
+}

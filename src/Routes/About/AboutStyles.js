@@ -98,6 +98,7 @@ export const PicContainer = styled.div`
     margin-left: auto;
     margin-right: auto;
     margin-top: 10%;
+    height: 200px;
   }
 `;
 
@@ -107,11 +108,6 @@ export const SelfImage = styled.div`
   background-position: center 30%;
   width: 300px;
   height: 300px;
-
-  @media (min-width: 320px) and (max-width: 480px) {
-    width: 150px;
-    height: 150px;
-  }
 `;
 
 export const LanguageTitle = styled.div`
@@ -148,7 +144,7 @@ export const LanguageContainer = styled.div`
   font-size: 18px;
 
   @media (min-width: 320px) and (max-width: 480px) {
-    font-size: 18px;
-    padding: 0 22px;
+    font-size: 13px;
+    padding: 5px 15px;
   }
 `;
