@@ -88,6 +88,11 @@ export const NameInput = styled.input`
   box-sizing: border-box;
   autofill: none;
 
+  &::placeholder {
+    font: 15px monospace;
+    color: #c3c5bc;
+  }
+
   &:autofill,
   &:-webkit-autofill,
   &:-webkit-autofill:hover,
@@ -110,6 +115,10 @@ export const NameInput = styled.input`
     font-size: 10px;
     border: 1px solid #aa475c;
     box-sizing: border-box;
+
+    &::-webkit-input-placeholder {
+      font: 10px monospace;
+    }
   }
 `;
 
@@ -124,7 +133,7 @@ export const MessageInput = styled.textarea`
   min-height: 200px;
   resize: none;
   color: #fff;
-  font-size: 20px;
+  font-size: 16px;
   border-radius: 8px;
   height: 26px;
   border: 2px solid #aa475c;
@@ -133,10 +142,13 @@ export const MessageInput = styled.textarea`
   box-sizing: border-box;
   background-color: transparent;
 
-  -webkit-text-fill-color: #c3c5bc;
-
   &:focus {
     border-color: #e28ea0;
+  }
+
+  &::placeholder {
+    font: 15px monospace;
+    color: #c3c5bc;
   }
 
   @media (min-width: 320px) and (max-width: 480px) {
@@ -145,6 +157,10 @@ export const MessageInput = styled.textarea`
     font-size: 10px;
     box-sizing: border-box;
     height: 200px;
+
+    &::-webkit-input-placeholder {
+      font: 10px monospace;
+    }
   }
 `;
 

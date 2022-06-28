@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const FooterContainer = styled.div`
   width: 100%;
-  height: 150px;
+  height: 100%;
   z-index: -1;
 
   @media (min-width: 320px) and (max-width: 480px) {

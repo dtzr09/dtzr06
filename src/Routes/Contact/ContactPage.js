@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import {
   ContactContainer,
   ContactWrapper,
@@ -14,8 +14,34 @@ import {
 } from "./ContactPageStyles";
 import { IoMdSend as Send } from "react-icons/io";
 import { IconContext } from "react-icons";
+import emailjs from "@emailjs/browser";
 
 function ContactPage() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          if (result.text == "OK") {
+            alert("Your Email has been sent successfully!");
+            form.current.reset();
+          }
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <>
       <ContactContainer id="contact">
@@ -23,24 +49,23 @@ function ContactPage() {
           <ContactTitle>
             <ContactSpan /> Let's Connect ! <ContactSpan />
           </ContactTitle>
-          <ContainerTwo>
+          <form ref={form}>
+            <ContainerTwo>
+              <InputBox>
+                <NameInput placeholder="Name: " name="name" />
+              </InputBox>
+              <InputBox>
+                <PhoneInput placeholder="Phone Number: " name="number" />
+              </InputBox>
+            </ContainerTwo>
             <InputBox>
-              Name: <br />
-              <NameInput />
+              <EmailInput placeholder="Email Address: " name="email" />
             </InputBox>
             <InputBox>
-              Phone Number: <br />
-              <PhoneInput />
+              <MessageInput placeholder="LinkedIn handle..." name="message" />
             </InputBox>
-          </ContainerTwo>
-          <InputBox>
-            Email: <br />
-            <EmailInput />
-          </InputBox>
-          <InputBox>
-            Message: <br />
-            <MessageInput />
-          </InputBox>
+          </form>
+
           <IconContext.Provider
             value={{
               style: {
@@ -49,7 +74,7 @@ function ContactPage() {
               },
             }}
           >
-            <SubmitButton>
+            <SubmitButton onClick={sendEmail}>
               Send! <Send />
             </SubmitButton>
           </IconContext.Provider>
