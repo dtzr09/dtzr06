@@ -3,11 +3,10 @@ import { Link } from "react-router-dom";
 
 export const CreationWrapper = styled.div`
   width: 100vw;
-  height: 100%;
   height: 125vh;
   min-height: 100%;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 568px) {
     height: 100%;
     padding-bottom: 70%;
   }
@@ -20,7 +19,7 @@ export const CreationContainer = styled.div`
   padding-left: 15%;
   position: relative;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 568px) {
     padding-top: 0px;
     padding-left: 0px;
     width: 100%;
@@ -35,7 +34,7 @@ export const TitleWrapper = styled.div`
   flex-direction: row;
   align-items: center;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 568px) {
     justify-content: center;
     padding: 0 35px;
   }
@@ -46,7 +45,7 @@ export const TitleH1 = styled.h1`
   font-weight: 100;
   color: #e0e1dc;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 568px) {
     font-size: 38px;
   }
 `;
@@ -57,17 +56,26 @@ export const Titlespan = styled.div`
   background-color: #c3c5bc;
   margin-left: 5%;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 568px) {
     display: none;
   }
 `;
 
 export const SliderContainer = styled.div`
   position: absolute;
-  height: 800px;
+  height: 100%;
+  max-height: 800px;
   width: 95%;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: 320px) and (max-width: 568px) {
+    height: 100%;
+  }
+
+  @media (max-width: 1270px) {
+    height: 100%;
+  }
 `;
 
 export const Card = styled.div`
@@ -85,7 +93,7 @@ export const InfoContainer = styled.div`
   background-color: rgba(46, 57, 79, 0.5);
   border-radius: 0px 0px 15px 15px;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 568px) {
     width: 100vw;
     display: flex;
     margin-left: auto;
@@ -105,7 +113,7 @@ export const CardContainer = styled.div`
 
 export const CardTitle = styled.p`
   font-size: 40px;
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 568px) {
     font-size: 30px;
   }
 `;
@@ -114,7 +122,7 @@ export const CardDetails = styled.p`
   font-size: 20px;
   color: rgba(255, 255, 255, 0.85);
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 568px) {
     font-size: 15px;
     width: 80%;
     margin-left: auto;
@@ -131,7 +139,7 @@ export const CardLanguage = styled.div`
   align-items: center;
   color: rgba(255, 255, 255, 0.7);
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 568px) {
     font-size: 12px;
     width: 80%;
     margin-left: auto;
@@ -149,7 +157,7 @@ export const LogosContainer = styled.div`
   display: flex;
   justify-content: space-around;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 568px) {
     padding-top: 10px;
     width: 50%;
   }
@@ -179,7 +187,7 @@ export const NavigationLogo = styled.div`
   bottom: 30%;
   color: rgba(255, 255, 255, 0.7);
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 568px) {
     top: 0;
     font-size: 25px;
     height: 110px;

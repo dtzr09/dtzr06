@@ -62,8 +62,8 @@ function AboutPage() {
   ];
 
   const languageStyle = {
-    marginRight: "20px",
-    fontSize: "20px",
+    marginRight: "1rem",
+    fontSize: "1rem",
   };
 
   return (
@@ -96,9 +96,7 @@ function AboutPage() {
           {techList.map((item) => {
             return (
               <LanguageContainer>
-                <AiOutlineDoubleRight
-                  style={languageStyle}
-                />
+                <AiOutlineDoubleRight style={languageStyle} />
                 {item.language} <br />
               </LanguageContainer>
             );

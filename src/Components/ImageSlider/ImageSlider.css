@@ -79,7 +79,7 @@
   margin-left: -60%;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 568px) {
   .container {
     display: none;
   }

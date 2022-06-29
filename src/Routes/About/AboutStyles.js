@@ -5,7 +5,7 @@ export const AboutWrapper = styled.div`
   width: 100vw;
   height: 100vh;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 568px) {
     height: fit-content;
     margin-bottom: 10%;
   }
@@ -17,7 +17,7 @@ export const AboutContainer = styled.div`
   padding-top: 8%;
   padding-left: 15%;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 568px) {
     padding-top: 0px;
     padding-left: 0px;
     width: 380px;
@@ -32,18 +32,18 @@ export const TitleWrapper = styled.div`
   flex-direction: row;
   align-items: center;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 568px) {
     justify-content: center;
     padding: 0 35px;
   }
 `;
 
 export const TitleH1 = styled.h1`
-  font-size: 50px;
+  font-size: 3.5rem;
   font-weight: 100;
   color: #e0e1dc;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 568px) {
     font-size: 38px;
     padding-bottom: 20px;
   }
@@ -54,7 +54,7 @@ export const Titlespan = styled.div`
   background-color: #c3c5bc;
   margin-left: 5%;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 568px) {
     display: none;
   }
 `;
@@ -65,7 +65,7 @@ export const InfoContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 568px) {
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -81,8 +81,8 @@ export const DetailsContainer = styled.div`
   font-size: 20px;
   line-height: 1.5;
 
-  @media (min-width: 320px) and (max-width: 480px) {
-    font-size: 18px;
+  @media (min-width: 320px) and (max-width: 568px) {
+    font-size: 16px;
   }
 `;
 
@@ -94,7 +94,7 @@ export const PicContainer = styled.div`
   border: 3px solid #aa475c;
   margin-bottom: 10px;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 568px) {
     margin-left: auto;
     margin-right: auto;
     margin-top: 10%;
@@ -115,8 +115,8 @@ export const LanguageTitle = styled.div`
   font-size: 20px;
   line-height: 1.5;
 
-  @media (min-width: 320px) and (max-width: 480px) {
-    font-size: 18px;
+  @media (min-width: 320px) and (max-width: 568px) {
+    font-size: 16px;
     margin-top: 20px;
     text-align: center;
   }
@@ -129,7 +129,7 @@ export const LanguagesContainer = styled.div`
   align-items: center;
   color: #c3c5bc;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 568px) {
     padding-top: 0px;
     justify-content: center;
   }
@@ -143,8 +143,8 @@ export const LanguageContainer = styled.div`
   align-items: center;
   font-size: 18px;
 
-  @media (min-width: 320px) and (max-width: 480px) {
-    font-size: 13px;
+  @media (min-width: 320px) and (max-width: 568px) {
+    font-size: 14px;
     padding: 5px 15px;
   }
 `;

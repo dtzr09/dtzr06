@@ -16,7 +16,7 @@ export const ContactWrapper = styled.div`
   line-height: 1.5;
   margin-top: 100px;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 568px) {
     padding: 0;
     width: 100%;
     height: 100%;
@@ -31,7 +31,7 @@ export const ContactSpan = styled.div`
   background-color: #aa475c;
   border-radius: 70%;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 568px) {
     width: 12%;
     border-radius: 0;
     height: 1px;
@@ -47,7 +47,7 @@ export const ContactTitle = styled.p`
   align-items: center;
   text-align: center;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 568px) {
     font-size: 30px;
   }
 `;
@@ -68,7 +68,7 @@ export const InputBox = styled.div`
   margin-right: auto;
   box-sizing: border-box;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 568px) {
     font-size: 12px;
     padding: 15px;
   }
@@ -110,7 +110,7 @@ export const NameInput = styled.input`
     border-color: #e28ea0;
   }
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 568px) {
     height: 12px;
     font-size: 10px;
     border: 1px solid #aa475c;
@@ -151,7 +151,7 @@ export const MessageInput = styled.textarea`
     color: #c3c5bc;
   }
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 568px) {
     border: 1px solid #aa475c;
     height: 12px;
     font-size: 10px;
@@ -185,7 +185,7 @@ export const SubmitButton = styled.div`
     color: #e28ea0;
   }
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 568px) {
     font-size: 13px;
     border: 1px solid #aa475c;
   }

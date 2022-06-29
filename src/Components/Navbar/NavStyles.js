@@ -16,7 +16,7 @@ export const NavContainer = styled.div`
   z-index: 999;
   background: transparent;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (max-width: 1260px) {
     display: none;
   }
 `;
@@ -40,7 +40,7 @@ export const ResumeButton = styled(LinkR)`
     border-color: #e28ea0;
   }
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 568px) {
     display: none;
   }
 `;
