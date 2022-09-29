@@ -47,12 +47,7 @@ function CreationsPage() {
       source: "github.com/dtzr09/netflix-clone",
       file_name: "netflix/",
 
-      photos: [
-        "0.mp4",
-        "1.png",
-        "2.png",
-        "3.png",
-      ],
+      photos: ["0.mp4", "1.png", "2.png", "3.png"],
     },
   ];
 
