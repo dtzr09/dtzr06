@@ -43,7 +43,7 @@ function CreationsPage() {
       name: "Netflix Clone",
       details: "A clone of Netflix implemented with Stripe and Firebase",
       langauge: "React.js, HTML, CSS, Javascript, Stripe, Firebase",
-      url: "netflix2-clone-e95d8.web.app/",
+      url: "netflix2-clone-e95d8.firebaseapp.com",
       source: "github.com/dtzr09/netflix-clone",
       file_name: "netflix/",
 
