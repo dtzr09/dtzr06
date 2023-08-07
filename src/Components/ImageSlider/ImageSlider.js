@@ -7,6 +7,8 @@ function ImageSlider({ card }) {
   const photos = card.photos;
   const file_name = card.file_name;
   const videoURL = BASE_URL + file_name + photos[0];
+  const [current, setCurrent] = useState(1);
+  
 
   useEffect(() => {
     videoRef.current?.load();
@@ -37,10 +39,38 @@ function ImageSlider({ card }) {
           {renderCards}
         </div>
         <div className="navigation-manual">
-          <label htmlFor="radio1" className="manual-btn"></label>
-          <label htmlFor="radio2" className="manual-btn"></label>
-          <label htmlFor="radio3" className="manual-btn"></label>
-          <label htmlFor="radio4" className="manual-btn"></label>
+          <label
+            htmlFor="radio1"
+            className="manual-btn"
+            style={{
+              background: current == 1 ? "var(--bolded_text)" : "inherit",
+            }}
+            onClick={() => setCurrent(1)}
+          ></label>
+          <label
+            htmlFor="radio2"
+            className="manual-btn"
+            style={{
+              background: current == 2 ? "var(--bolded_text)" : "inherit",
+            }}
+            onClick={() => setCurrent(2)}
+          ></label>
+          <label
+            htmlFor="radio3"
+            className="manual-btn"
+            style={{
+              background: current == 3 ? "var(--bolded_text)" : "inherit",
+            }}
+            onClick={() => setCurrent(3)}
+          ></label>
+          <label
+            htmlFor="radio4"
+            className="manual-btn"
+            style={{
+              background: current == 4 ? "var(--bolded_text)" : "inherit",
+            }}
+            onClick={() => setCurrent(4)}
+          ></label>
         </div>
       </div>
     </div>

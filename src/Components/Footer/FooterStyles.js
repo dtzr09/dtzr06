@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { textColor } from "../../styles/variables";
 
 export const FooterContainer = styled.div`
   width: 100%;
@@ -25,7 +26,7 @@ export const FooterWrapper = styled.div`
 export const FooterDetails = styled.div`
   position: absolute;
   bottom: 3%;
-  color: #c3c5bc;
+  color: ${textColor};
 
   @media (min-width: 320px) and (max-width: 568px) {
     font-size: 7px;

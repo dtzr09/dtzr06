@@ -1,11 +1,11 @@
 import { Link as LinkS } from "react-scroll";
 import { Link as LinkR } from "react-router-dom";
 import styled from "styled-components";
+import { boldedColor, hoverColor, textColor } from "../../styles/variables";
 
 export const HomeContainer = styled.div`
   width: 100%;
   height: 100vh;
-  background-color: #1d2638;
 
   @media (min-width: 320px) and (max-width: 568px) {
     width: 300px;
@@ -17,11 +17,9 @@ export const HomeContainer = styled.div`
 `;
 
 export const DetailsContainer = styled.div`
-  width: 55%;
   height: 50%;
-  padding-top: 10%;
+  padding-top: 25%;
   padding-left: 15%;
-  font-weight: 80;
   line-height: 1.5;
 
   @media (min-width: 320px) and (max-width: 568px) {
@@ -35,7 +33,6 @@ export const DetailsContainer = styled.div`
 export const TitlesWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  color: #aa475c;
 
   @media (min-width: 320px) and (max-width: 568px) {
     width: 100%;
@@ -44,9 +41,9 @@ export const TitlesWrapper = styled.div`
 `;
 
 export const TitleH1 = styled.h1`
-  color: #e0e1dc;
-  font-size: 4.5rem;
-  font-weight: 80;
+  color: ${textColor};
+  font-size: 5rem;
+  font-weight: 400;
 
   @media (min-width: 320px) and (max-width: 568px) {
     font-size: 35px;
@@ -54,11 +51,25 @@ export const TitleH1 = styled.h1`
 `;
 
 export const TitleSpan = styled.span`
-  color: #aa475c;
+  font-weight: 500;
+  font-size: 6rem;
+  color: ${boldedColor};
 `;
+
 export const IntroP1 = styled.p`
-  font-size: 40px;
-  color: #c3c5bc;
+  font-size: 2.2rem;
+  color: ${textColor};
+
+  @media (min-width: 320px) and (max-width: 568px) {
+    font-size: 20px;
+  }
+`;
+
+export const IntroP2 = styled.p`
+  max-width: 50%;
+  margin-top: 10px;
+  font-size: 1.5rem;
+  color: ${textColor};
 
   @media (min-width: 320px) and (max-width: 568px) {
     font-size: 20px;
@@ -86,48 +97,6 @@ export const NavButtonContainer = styled.div`
   }
 `;
 
-export const HelloButton = styled(LinkS)`
-  color: #aa475c;
-  width: fit-content;
-  background-color: transparent;
-  border: 3px solid #aa475c;
-  margin-top: 10%;
-  padding: 15px;
-  cursor: pointer;
-  font-size: 26px;
-  font-weight: 100;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  &:hover {
-    border-color: #e28ea0;
-    color: #e28ea0;
-  }
-
-  @media (min-width: 320px) and (max-width: 568px) {
-    font-size: 12px;
-    padding: 8px;
-    border: 1px solid #aa475c;
-    margin: 0;
-  }
-`;
-
-export const MailLogoContainer = styled.div`
-  margin-right: 10px;
-  width: 36px;
-  height: 40px;
-  font-size: 36px;
-
-  @media (min-width: 320px) and (max-width: 568px) {
-    font-size: 18px;
-    width: 18px;
-    height: 20px;
-    margin-right: 6px;
-  }
-`;
-
 export const ResumeButton = styled(LinkR)`
   display: none;
 
@@ -136,11 +105,11 @@ export const ResumeButton = styled(LinkR)`
     position: relative;
     font-size: 12px;
     padding: 8px;
-    border: 1px solid #aa475c;
+    border: 1px solid ${boldedColor};
     margin: 0;
     border-radius: 8px;
     text-decoration: none;
-    color: #aa475c;
+    color: ${textColor};
   }
 
   @media (min-width: 569px) and (max-width: 1260px) {
@@ -148,17 +117,17 @@ export const ResumeButton = styled(LinkR)`
     position: relative;
     font-size: 26px;
     padding: 15px 25px;
-    border: 3px solid #aa475c;
+    border: 3px solid ${boldedColor};
     margin: 0;
     z-index: 1;
-    color: #aa475c;
+    color: ${textColor};
     border-radius: 8px;
     text-decoration: none;
     margin-top: 10%;
 
     &:hover {
-      color: #e28ea0;
-      border-color: #e28ea0;
+      color: ${hoverColor};
+      border-color: ${hoverColor};
     }
   }
 `;

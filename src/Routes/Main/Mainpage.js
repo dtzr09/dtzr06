@@ -6,16 +6,13 @@ import {
   TitleH1,
   TitleSpan,
   IntroP1,
-  HelloButton,
-  MailLogoContainer,
   NavButtonContainer,
   ResumeButton,
+  IntroP2,
 } from "./MainStyles";
 import Typical from "react-typical";
 import Nav from "../../Components/Navbar/Nav.js";
-import { FiMail as Mail } from "react-icons/fi";
-import { IconContext } from "react-icons";
-import cv_file from "../../static/cv.pdf";
+import resume from "../../static/resume.pdf";
 
 function Mainpage() {
   return (
@@ -24,59 +21,34 @@ function Mainpage() {
         <DetailsContainer>
           <TitlesWrapper>
             <TitleH1>
-              Hi! I am <TitleSpan>Derrick</TitleSpan>.
+              Hello! <TitleSpan>Derrick</TitleSpan> here.
             </TitleH1>
           </TitlesWrapper>
           <IntroP1>
-            I
+            I am
             <Typical
               loop={Infinity}
               wrapper="b"
               steps={[
-                " love challenges.",
-                2000,
-                "'m a self-taught website developer.",
-                2000,
+                " a self-taught developer ",
+                3000,
+                " a student in NTU ",
+                3000,
+                " an aspiring SWE ",
+                3000,
+                " a Full Stack Developer ",
+                3000,
               ]}
             />
           </IntroP1>
-          {/* <IconContext.Provider
-            value={{
-              style: {
-                width: "26px",
-                height: "26px",
-                marginRight: "8px",
-              },
-            }}
-          >
-            <HelloButton
-              to="contact"
-              smooth={true}
-              duration={800}
-              spy={true}
-              exact="true"
-            >
-              <Mail />
-              Reach out to me!
-            </HelloButton>
-            <ResumeButton to={cv_file} target="_blank">
-              Resume
-            </ResumeButton>
-          </IconContext.Provider> */}
+          <IntroP2>
+            I am currently an undergraduate pursuing Chemical and Biomolecular
+            Engineering. I am passionate in learning and upgrading my skillset
+            to create better websites and algorithms to solve problems.
+          </IntroP2>
+
           <NavButtonContainer>
-            <HelloButton
-              to="contact"
-              smooth={true}
-              duration={800}
-              spy={true}
-              exact="true"
-            >
-              <MailLogoContainer>
-                <Mail />
-              </MailLogoContainer>
-              Reach out to me!
-            </HelloButton>
-            <ResumeButton to={cv_file} target="_blank">
+            <ResumeButton to={resume} target="_blank">
               Resume
             </ResumeButton>
           </NavButtonContainer>

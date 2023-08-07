@@ -43,17 +43,16 @@
   margin-top: 10px;
   display: flex;
   justify-content: center;
-  background-color: rgb(29, 38, 56);
 }
 
 .manual-btn {
-  border: 1px solid #c32148;
+  border: 1px solid var(--bolded_text) !important;
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
   transition: 1s;
   background-color: transparent;
-  width: 5%;
+  width: 7%;
 }
 
 .manual-btn:not(:last-child) {
@@ -61,12 +60,13 @@
 }
 
 .manual-btn:hover {
-  background: #c32148;
+  background: var(--bolded_text);
 }
 
 #radio1:checked ~ .first {
   margin-left: 0;
 }
+
 #radio2:checked ~ .first {
   margin-left: -20%;
 }

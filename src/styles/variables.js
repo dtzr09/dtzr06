@@ -1,0 +1,9 @@
+export const backgroundColor = "#121A26";
+export const backgroundColor_1 = "#22324a";
+export const backgroundColor_2 = "rgba(45, 212, 191, 0.1)";
+export const backgroundColor_3 = "rgba(0,0,0,0.2)";
+export const textColor = "#A3C4D1";
+export const textColor_1 = "rgba(94, 234, 212, 0.8)";
+export const boldedColor = "#00FFFF";
+export const boldedColor_1 = "#FFF";
+export const hoverColor = "#81A9B1";

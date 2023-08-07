@@ -1,13 +1,20 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import {
+  backgroundColor_1,
+  backgroundColor_2,
+  backgroundColor_3,
+  boldedColor,
+  boldedColor_1,
+  hoverColor,
+  textColor,
+  textColor_1,
+} from "../../styles/variables";
 
 export const CreationWrapper = styled.div`
-  width: 100vw;
-  height: 125vh;
-  min-height: 100%;
+  width: 100%;
+  height: 80vh;
 
   @media (min-width: 320px) and (max-width: 568px) {
-    height: 100%;
     padding-bottom: 70%;
   }
 `;
@@ -43,7 +50,7 @@ export const TitleWrapper = styled.div`
 export const TitleH1 = styled.h1`
   font-size: 50px;
   font-weight: 100;
-  color: #e0e1dc;
+  color: ${boldedColor};
 
   @media (min-width: 320px) and (max-width: 568px) {
     font-size: 38px;
@@ -53,7 +60,7 @@ export const TitleH1 = styled.h1`
 export const Titlespan = styled.div`
   width: 300px;
   height: 1px;
-  background-color: #c3c5bc;
+  background-color: ${textColor};
   margin-left: 5%;
 
   @media (min-width: 320px) and (max-width: 568px) {
@@ -61,28 +68,11 @@ export const Titlespan = styled.div`
   }
 `;
 
-export const SliderContainer = styled.div`
-  position: absolute;
-  height: 100%;
-  max-height: 800px;
-  width: 95%;
-  display: flex;
-  flex-direction: column;
-
-  @media (min-width: 320px) and (max-width: 568px) {
-    height: 100%;
-  }
-
-  @media (max-width: 1270px) {
-    height: 100%;
-  }
-`;
-
 export const Card = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  color: white;
+  color: ${textColor};
   text-align: center;
   padding-top: 20px;
 `;
@@ -101,106 +91,96 @@ export const InfoContainer = styled.div`
   }
 `;
 
-export const DetailsContainer = styled.div`
-  line-height: 1.8;
+export const ProjectWrapper = styled.ul`
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  grid-gap: 20px;
+
+  @media screen and (max-width: 1080px) {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
 `;
 
-export const CardContainer = styled.div`
-  width: 100%;
-  height: 100%;
+export const ProjectContainer = styled.div`
+  background: ${backgroundColor_1};
+  border-radius: 20px;
+  color: ${textColor};
+  padding: 15px;
+  cursor: pointer;
   position: relative;
-`;
-
-export const CardTitle = styled.p`
-  font-size: 40px;
-  @media (min-width: 320px) and (max-width: 568px) {
-    font-size: 30px;
-  }
-`;
-
-export const CardDetails = styled.p`
-  font-size: 20px;
-  color: rgba(255, 255, 255, 0.85);
-
-  @media (min-width: 320px) and (max-width: 568px) {
-    font-size: 15px;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-`;
-
-export const CardLanguage = styled.div`
-  width: 100%;
-  font-size: 18px;
   display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  color: rgba(255, 255, 255, 0.7);
-
-  @media (min-width: 320px) and (max-width: 568px) {
-    font-size: 12px;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px 0px;
-  }
-`;
-
-export const LogosContainer = styled.div`
-  padding-top: 18px;
-  font-size: 25px;
-  width: 10%;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: space-around;
-
-  @media (min-width: 320px) and (max-width: 568px) {
-    padding-top: 10px;
-    width: 50%;
-  }
-`;
-
-export const GithubLogo = styled(Link)`
-  cursor: pointer;
-  color: #fff;
-`;
-
-export const LiveLogo = styled(Link)`
-  cursor: pointer;
-  color: #fff;
-`;
-
-export const NavigationLogo = styled.div`
-  width: 95%;
-  align-items: center;
-  text-align: center;
-  position: absolute;
-  display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  font-size: 32px;
-  cursor: pointer;
-  left: 2.5%;
-  right: 2.5%;
-  bottom: 30%;
-  color: rgba(255, 255, 255, 0.7);
 
-  @media (min-width: 320px) and (max-width: 568px) {
+  > span {
+    font-size: 22px;
+    font-weight: 500px;
+    color: ${boldedColor_1};
+  }
+
+  > p {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  > ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+
+    > li {
+      margin-top: 1rem;
+      margin-right: 0.5rem;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
     top: 0;
-    font-size: 25px;
-    height: 110px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: ${backgroundColor_3};
+    border-radius: 20px;
+    z-index: 1;
+  }
+
+  &:hover::before {
+    opacity: 0;
+  }
+
+  &:hover {
+    transform: translateY(-7px);
+    background: ${backgroundColor_1};
+
+    > span {
+      color: ${boldedColor};
+    }
   }
 `;
 
-export const LeftContainer = styled.div`
-  &:hover {
-    color: rgba(255, 255, 255, 1);
+export const ImageContainer = styled.div`
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-bottom: 20px;
+
+  > img {
+    max-height: 250px;
+    width: auto;
+    margin-left: -30%;
   }
 `;
-export const RightContainer = styled.div`
-  &:hover {
-    color: rgba(255, 255, 255, 1);
-  }
+
+export const SkillsBox = styled.div`
+  background: ${backgroundColor_2};
+  color: ${textColor_1};
+  width: fit-content;
+  padding: 0.15rem 0.8rem 0.15rem 0.8rem;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
 `;

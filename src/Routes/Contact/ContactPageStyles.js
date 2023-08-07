@@ -1,8 +1,8 @@
 import styled from "styled-components";
+import { boldedColor, hoverColor, textColor } from "../../styles/variables";
 
 export const ContactContainer = styled.div`
   width: 100vw;
-  height: 100%;
 `;
 
 export const ContactWrapper = styled.div`
@@ -24,25 +24,12 @@ export const ContactWrapper = styled.div`
   }
 `;
 
-export const ContactSpan = styled.div`
-  height: 5px;
-  width: 20%;
-  margin: 0 25px;
-  background-color: #aa475c;
-  border-radius: 70%;
-
-  @media (min-width: 320px) and (max-width: 568px) {
-    width: 12%;
-    border-radius: 0;
-    height: 1px;
-  }
-`;
 export const ContactTitle = styled.p`
   margin-bottom: 10px;
   display: flex;
   font-size: 50px;
   font-weight: 500;
-  color: #e0e1dc;
+  color: ${boldedColor};
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -61,7 +48,7 @@ export const ContainerTwo = styled.div`
 export const InputBox = styled.div`
   line-height: 1.5;
   font-size: 20px;
-  color: #c3c5bc;
+  color: ${textColor};
   padding: 20px;
   width: 100%;
   margin-left: auto;
@@ -80,7 +67,7 @@ export const NameInput = styled.input`
   font-size: 18px;
   width: 100%;
   background-color: transparent;
-  border: 2px solid #aa475c;
+  border: 2px solid ${textColor};
   border-radius: 8px;
   height: 40px;
   outline: none;
@@ -90,7 +77,7 @@ export const NameInput = styled.input`
 
   &::placeholder {
     font: 15px monospace;
-    color: #c3c5bc;
+    color: ${textColor};
   }
 
   &:autofill,
@@ -103,17 +90,17 @@ export const NameInput = styled.input`
 
   &:-webkit-autofill {
     transition: background-color 5000s ease-in-out 0s !important;
-    -webkit-text-fill-color: #c3c5bc;
+    -webkit-text-fill-color: ${textColor};
   }
 
   &:focus {
-    border-color: #e28ea0;
+    border-color: ${hoverColor};
   }
 
   @media (min-width: 320px) and (max-width: 568px) {
     height: 12px;
     font-size: 10px;
-    border: 1px solid #aa475c;
+    border: 1px solid ${textColor};
     box-sizing: border-box;
 
     &::-webkit-input-placeholder {
@@ -136,23 +123,23 @@ export const MessageInput = styled.textarea`
   font-size: 16px;
   border-radius: 8px;
   height: 26px;
-  border: 2px solid #aa475c;
+  border: 2px solid ${textColor};
   outline: none;
   padding: 12px;
   box-sizing: border-box;
   background-color: transparent;
 
   &:focus {
-    border-color: #e28ea0;
+    border-color: ${hoverColor};
   }
 
   &::placeholder {
     font: 15px monospace;
-    color: #c3c5bc;
+    color: ${textColor};
   }
 
   @media (min-width: 320px) and (max-width: 568px) {
-    border: 1px solid #aa475c;
+    border: 1px solid ${textColor};
     height: 12px;
     font-size: 10px;
     box-sizing: border-box;
@@ -165,7 +152,7 @@ export const MessageInput = styled.textarea`
 `;
 
 export const SubmitButton = styled.div`
-  color: #aa475c;
+  color: ${textColor};
   text-align: center;
   display: flex;
   align-items: center;
@@ -173,7 +160,7 @@ export const SubmitButton = styled.div`
   font-size: 25px;
   justify-content: center;
   width: 20%;
-  border: 2px solid #aa475c;
+  border: 2px solid ${textColor};
   cursor: pointer;
   padding: 8px 2px;
   border-radius: 10px;
@@ -181,12 +168,12 @@ export const SubmitButton = styled.div`
   margin-right: auto;
 
   &:hover {
-    border-color: #e28ea0;
-    color: #e28ea0;
+    border-color: ${hoverColor};
+    color: ${hoverColor};
   }
 
   @media (min-width: 320px) and (max-width: 568px) {
     font-size: 13px;
-    border: 1px solid #aa475c;
+    border: 1px solid ${textColor};
   }
 `;

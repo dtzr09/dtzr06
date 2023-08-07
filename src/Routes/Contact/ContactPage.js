@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import {
   ContactContainer,
   ContactWrapper,
-  ContactSpan,
   ContactTitle,
   ContainerTwo,
   InputBox,
@@ -46,9 +45,7 @@ function ContactPage() {
     <>
       <ContactContainer id="contact">
         <ContactWrapper>
-          <ContactTitle>
-            <ContactSpan /> Let's Connect ! <ContactSpan />
-          </ContactTitle>
+          <ContactTitle>Let's Connect !</ContactTitle>
           <form ref={form}>
             <ContainerTwo>
               <InputBox>

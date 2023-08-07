@@ -1,9 +1,13 @@
 import styled from "styled-components";
 import { Link as LinkS } from "react-scroll";
 import { Link as LinkR } from "react-router-dom";
+import {
+  backgroundColor_1,
+  boldedColor,
+  hoverColor,
+} from "../../styles/variables";
 
 export const NavContainer = styled.div`
-  width: 90px;
   height: 110px;
   display: flex;
   flex-direction: column;
@@ -26,9 +30,9 @@ export const ResumeButton = styled(LinkR)`
   top: 0;
   right: 0;
   z-index: 1;
-  border: 2px solid #aa475c;
+  background-color: ${backgroundColor_1};
   font-size: 20px;
-  color: #aa475c;
+  color: ${boldedColor};
   padding: 3px 18px;
   margin-right: 40px;
   margin-top: 22px;
@@ -36,8 +40,8 @@ export const ResumeButton = styled(LinkR)`
   text-decoration: none;
 
   &:hover {
-    color: #e28ea0;
-    border-color: #e28ea0;
+    color: ${hoverColor};
+    border-color: ${hoverColor};
   }
 
   @media (min-width: 320px) and (max-width: 568px) {
@@ -48,15 +52,15 @@ export const ResumeButton = styled(LinkR)`
 export const HomeLink = styled(LinkS)`
   font-size: 20px;
   text-decoration: none;
-  color: #aa475c;
+  color: ${boldedColor};
   cursor: pointer;
   background: transparent;
 
   &:hover {
-    color: #e28ea0;
+    color: ${hoverColor};
   }
 `;
-export const AboutLink = styled(HomeLink)``;
+export const ExperienceLink = styled(HomeLink)``;
 
 export const CreationsLink = styled(HomeLink)``;
 
@@ -75,10 +79,10 @@ export const LogoWrapper = styled(LinkR)`
   width: 24px;
   height: 24px;
   cursor: pointer;
-  color: #aa475c;
+  color: ${boldedColor};
 
   &:hover {
     height: 20px;
-    color: #e28ea0;
+    color: ${hoverColor};
   }
 `;

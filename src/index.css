@@ -11,3 +11,10 @@
 *::-webkit-scrollbar {
   display: none;
 }
+
+:root {
+  --bolded_text: #008080;
+  --text: #a3c4d1;
+  --backgroundcolor: #121a26;
+  --hover: #81a9b1;
+}
