@@ -8,7 +8,6 @@ function ImageSlider({ card }) {
   const file_name = card.file_name;
   const videoURL = BASE_URL + file_name + photos[0];
   const [current, setCurrent] = useState(1);
-  
 
   useEffect(() => {
     videoRef.current?.load();
