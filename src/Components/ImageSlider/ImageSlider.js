@@ -24,12 +24,12 @@ function ImageSlider({ card }) {
   return (
     <div className="container">
       <div className="slider">
-        <div className="slides">
+        <div className="slides" >
           <input type="radio" name="radio-btn" id="radio1" />
           <input type="radio" name="radio-btn" id="radio2" />
           <input type="radio" name="radio-btn" id="radio3" />
           <input type="radio" name="radio-btn" id="radio4" />
-          <div className="slide first">
+          <div className="slide first" style={{ height: "500px" }}>
             <video key={videoURL} loop autoPlay muted width="100%">
               <source src={videoURL} type="video/mp4" />
               Your browser does not support the video tag.

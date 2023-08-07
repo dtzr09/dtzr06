@@ -31,7 +31,7 @@ export const creations = [
     details: "A system that enables users to send and retrieve messages.",
     skills: ["Golang", "gRPC", "mySQL", "Docker"],
     url: "",
-    source: "https://github.com/dtzr09/IM_service",
+    source: "github.com/dtzr09/IM_service",
     preview: imPhoto,
     file_name: "im/",
     photos: ["0.mp4", "1.png", "2.png", "3.png"],

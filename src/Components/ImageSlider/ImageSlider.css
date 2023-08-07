@@ -17,7 +17,7 @@
 
 .slides {
   width: 500%;
-  height: 100%;
+  max-height: 500px;
   display: flex;
 }
 

@@ -53,9 +53,11 @@ function CardInfo({ card }) {
           <GithubLogo to={`//${card?.source}`} target="_blank">
             <Github />
           </GithubLogo>
-          <LiveLogo to={`//${card?.url}`} target="_blank">
-            <MdWifiTethering />
-          </LiveLogo>
+          {card.url ? (
+            <LiveLogo to={`//${card?.url}`} target="_blank">
+              <MdWifiTethering />
+            </LiveLogo>
+          ) : null}
         </LogosContainer>
         {/* <NavigationLogo>
           <LeftContainer
