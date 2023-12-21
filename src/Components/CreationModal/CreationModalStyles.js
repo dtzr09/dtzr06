@@ -1,15 +1,16 @@
 import styled from "styled-components";
 import { Modal } from "semantic-ui-react";
 
-export const Creation = styled.div`
-  background: transparent;
-`;
-
 export const CustomModal = styled(Modal).attrs(() => ({
   className: "custom-modal",
 }))`
   &&&.custom-modal {
     background-color: transparent;
+  }
+`;
+
+export const Creation = styled.div`
+  background: transparent;
 `;
 
 export const SliderContainer = styled.div`
@@ -19,7 +20,7 @@ export const SliderContainer = styled.div`
   flex-direction: column;
 
   @media (min-width: 320px) and (max-width: 568px) {
-    height: 100%;
+    height: 100vh;
   }
 
   @media (max-width: 1270px) {
@@ -34,9 +35,9 @@ export const InfoContainer = styled.div`
   border-radius: 0px 0px 15px 15px;
 
   @media (min-width: 320px) and (max-width: 568px) {
-    width: 100vw;
+    width: 95vw;
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
+    height: 100%;
+    border-radius: 15px;
   }
 `;

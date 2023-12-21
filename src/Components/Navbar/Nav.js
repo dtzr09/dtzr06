@@ -7,6 +7,7 @@ import {
   CreationsLink,
   LogosContainer,
   LogoWrapper,
+  ContactsLink,
 } from "./NavStyles";
 
 import { FiGithub as Github } from "react-icons/fi";
@@ -30,7 +31,7 @@ function Nav() {
         duration={800}
         spy={true}
         exact="true"
-        offset={80}
+        offset={-80}
       >
         /experience
       </ExperienceLink>
@@ -44,6 +45,16 @@ function Nav() {
       >
         /projects
       </CreationsLink>
+      <ContactsLink
+        to="contact"
+        smooth={true}
+        duration={800}
+        spy={true}
+        exact="true"
+        offset={80}
+      >
+        /contact me
+      </ContactsLink>
       <IconContext.Provider
         value={{
           style: {

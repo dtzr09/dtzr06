@@ -5,23 +5,23 @@ import {
   backgroundColor_3,
   boldedColor,
   boldedColor_1,
-  hoverColor,
   textColor,
   textColor_1,
 } from "../../styles/variables";
 
 export const CreationWrapper = styled.div`
   width: 100%;
-  height: 80vh;
+  height: 100vh;
 
   @media (min-width: 320px) and (max-width: 568px) {
     padding-bottom: 70%;
+    height: 100vh;
   }
 `;
 
 export const CreationContainer = styled.div`
   width: 60%;
-  height: 100%;
+  max-height: 80%;
   padding-top: 8%;
   padding-left: 15%;
   position: relative;
@@ -43,7 +43,7 @@ export const TitleWrapper = styled.div`
 
   @media (min-width: 320px) and (max-width: 568px) {
     justify-content: center;
-    padding: 0 35px;
+    padding: 0px 35px;
   }
 `;
 
@@ -53,7 +53,10 @@ export const TitleH1 = styled.h1`
   color: ${boldedColor};
 
   @media (min-width: 320px) and (max-width: 568px) {
-    font-size: 38px;
+    font-size: 36px;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
   }
 `;
 
@@ -101,6 +104,13 @@ export const ProjectWrapper = styled.ul`
   @media screen and (max-width: 1080px) {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
+
+  @media (min-width: 320px) and (max-width: 568px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const ProjectContainer = styled.div`
@@ -118,6 +128,7 @@ export const ProjectContainer = styled.div`
     font-size: 22px;
     font-weight: 500px;
     color: ${boldedColor_1};
+    margin-bottom: 10px;
   }
 
   > p {
@@ -159,6 +170,10 @@ export const ProjectContainer = styled.div`
     > span {
       color: ${boldedColor};
     }
+  }
+
+  @media (min-width: 320px) and (max-width: 568px) {
+    max-width: 90%;
   }
 `;
 

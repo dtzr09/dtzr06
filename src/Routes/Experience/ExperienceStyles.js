@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import profileImg from "../../static/profileImg.png";
 import {
+  backgroundColor_1,
   backgroundColor_2,
   boldedColor,
   boldedColor_1,
@@ -10,24 +11,23 @@ import {
 
 export const ExpWrapper = styled.div`
   height: 80vh;
+
   @media (min-width: 320px) and (max-width: 568px) {
-    height: fit-content;
+    height: 100%;
     margin-bottom: 10%;
   }
 `;
 
 export const ExpContainer = styled.div`
   min-height: 200px;
-  padding-top: 8%;
   padding-left: 15%;
 
   @media (min-width: 320px) and (max-width: 568px) {
     padding-top: 0px;
     padding-left: 0px;
     width: 380px;
-    margin-left: auto;
-    margin-right: auto;
     height: fit-content;
+    margin: 0px;
   }
 `;
 
@@ -35,21 +35,24 @@ export const TitleWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding-left: 15%;
 
   @media (min-width: 320px) and (max-width: 568px) {
-    justify-content: center;
-    padding: 0 35px;
+    justify-content: left;
+    padding: 0 40px;
   }
 `;
 
 export const TitleH1 = styled.h1`
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 100;
   color: ${boldedColor};
 
   @media (min-width: 320px) and (max-width: 568px) {
-    font-size: 38px;
+    font-size: 36px;
     padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
   }
 `;
 export const Titlespan = styled.div`
@@ -68,14 +71,6 @@ export const InfoContainer = styled.div`
   display: flex;
   position: relative;
   flex-direction: row;
-
-  @media (min-width: 320px) and (max-width: 568px) {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
-  }
 `;
 
 export const ExpLine = styled.div`
@@ -84,6 +79,31 @@ export const ExpLine = styled.div`
   height: 250px;
   position: absolute;
   left: 10px;
+`;
+
+export const ItemWrapper = styled.div`
+  position: relative;
+  @media (min-width: 320px) and (max-width: 568px) {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+  }
+`;
+export const Item = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding: 20px 0px 20px 0px;
+  align-items: center;
+  min-width: 200px;
+
+  @media (min-width: 320px) and (max-width: 568px) {
+    flex-direction: column;
+    align-items: unset;
+    background-color: ${backgroundColor_1};
+    margin: 10px 0px;
+    padding: 8px 16px;
+    border-radius: 10px;
+  }
 `;
 
 export const ItemBullet = styled.div`
@@ -97,14 +117,6 @@ export const ItemBullet = styled.div`
   text-align: center;
   position: relative;
   cursor: pointer;
-`;
-
-export const Item = styled.div`
-  display: flex;
-  flex-direction: row;
-  padding: 20px 0px 20px 0px;
-  align-items: center;
-  min-width: 200px;
 `;
 
 export const DescBox = styled.div`
@@ -124,6 +136,13 @@ export const DescBox = styled.div`
       margin-left: 0.5rem;
     }
   }
+
+  @media (min-width: 320px) and (max-width: 568px) {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+  }
 `;
 
 export const Desc = styled.div`
@@ -132,9 +151,25 @@ export const Desc = styled.div`
   font-size: 30px;
   color: ${boldedColor_1};
   padding: 10px 0px;
+  width: 100vw;
 
   > span {
     color: ${boldedColor};
+  }
+
+  @media (min-width: 320px) and (max-width: 568px) {
+    flex-direction: column;
+    text-align: left;
+    align-items: unset;
+    font-size: 20px;
+    padding: 0px;
+
+    > span {
+      font-size: 22px;
+      display: flex;
+      text-align: left;
+      justify-content: left;
+    }
   }
 `;
 export const DescList = styled.div`
@@ -163,6 +198,10 @@ export const ItemValues = styled.div`
   &:hover {
     color: ${boldedColor_1};
   }
+
+  @media (min-width: 320px) and (max-width: 568px) {
+    font-size: 16px;
+  }
 `;
 
 export const Dot = styled.div`
@@ -171,6 +210,10 @@ export const Dot = styled.div`
   width: 4px;
   border-radius: 100px;
   margin: 0px 10px;
+
+  @media (min-width: 320px) and (max-width: 568px) {
+    display: none;
+  }
 `;
 
 export const SkillsBox = styled.div`

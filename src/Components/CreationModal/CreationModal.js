@@ -6,9 +6,10 @@ import {
   SliderContainer,
 } from "./CreationModalStyles";
 import ImageSlider from "../ImageSlider/ImageSlider";
-import CardInfo from "./CardInfo";
+import CardInfo from "../Card/CardInfo";
+import JobInfo from "../Job/JobInfo";
 
-function CreationModal({ card, open, setOpen }) {
+function CreationModal({ card, open, setOpen, image, type }) {
   return (
     <CustomModal
       onClose={() => setOpen(false)}
@@ -17,9 +18,13 @@ function CreationModal({ card, open, setOpen }) {
     >
       <Creation>
         <SliderContainer>
-          <ImageSlider card={card} />
+          {image ? <ImageSlider card={card} /> : null}
           <InfoContainer>
-            <CardInfo card={card} />
+            {type != "Projects" ? (
+              <CardInfo card={card} />
+            ) : (
+              <JobInfo card={card} />
+            )}
           </InfoContainer>
         </SliderContainer>
       </Creation>

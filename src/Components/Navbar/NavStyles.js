@@ -60,9 +60,11 @@ export const HomeLink = styled(LinkS)`
     color: ${hoverColor};
   }
 `;
+
 export const ExperienceLink = styled(HomeLink)``;
 
 export const CreationsLink = styled(HomeLink)``;
+export const ContactsLink = styled(HomeLink)``;
 
 export const LogosContainer = styled.div`
   width: 100%;

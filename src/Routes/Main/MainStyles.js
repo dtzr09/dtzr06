@@ -1,15 +1,14 @@
-import { Link as LinkS } from "react-scroll";
 import { Link as LinkR } from "react-router-dom";
 import styled from "styled-components";
 import { boldedColor, hoverColor, textColor } from "../../styles/variables";
 
 export const HomeContainer = styled.div`
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 
   @media (min-width: 320px) and (max-width: 568px) {
     width: 300px;
-    height: 100%;
+    height: 100vh;
     margin-bottom: 20%;
     margin-left: auto;
     margin-right: auto;
@@ -36,43 +35,50 @@ export const TitlesWrapper = styled.div`
 
   @media (min-width: 320px) and (max-width: 568px) {
     width: 100%;
-    justify-content: center;
+    justify-content: left;
   }
 `;
 
 export const TitleH1 = styled.h1`
   color: ${textColor};
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 400;
 
   @media (min-width: 320px) and (max-width: 568px) {
-    font-size: 35px;
+    text-align: left;
+    font-size: 30px;
   }
 `;
 
 export const TitleSpan = styled.span`
   font-weight: 500;
-  font-size: 6rem;
+  font-size: 5rem;
   color: ${boldedColor};
+  @media (min-width: 320px) and (max-width: 568px) {
+    font-size: 45px;
+  }
 `;
 
 export const IntroP1 = styled.p`
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   color: ${textColor};
 
   @media (min-width: 320px) and (max-width: 568px) {
-    font-size: 20px;
+    text-align: left;
+    margin-top: 15px;
+    max-width: 100%;
   }
 `;
 
 export const IntroP2 = styled.p`
   max-width: 50%;
-  margin-top: 10px;
+  margin-top: 5px;
   font-size: 1.5rem;
   color: ${textColor};
 
   @media (min-width: 320px) and (max-width: 568px) {
-    font-size: 20px;
+    text-align: left;
+    max-width: 100%;
   }
 `;
 
@@ -85,9 +91,6 @@ export const NavButtonContainer = styled.div`
 
   @media (min-width: 320px) and (max-width: 568px) {
     font-size: 12px;
-    padding: 8px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   @media (min-width: 568px) and (max-width: 1050px) {
@@ -100,10 +103,16 @@ export const NavButtonContainer = styled.div`
 export const ResumeButton = styled(LinkR)`
   display: none;
 
+  &:hover {
+    color: ${hoverColor};
+    border-color: ${hoverColor};
+  }
+
   @media (min-width: 320px) and (max-width: 568px) {
     display: block;
     position: relative;
-    font-size: 12px;
+    font-size: 20px;
+    font-weight: 700;
     padding: 8px;
     border: 1px solid ${boldedColor};
     margin: 0;
@@ -124,10 +133,5 @@ export const ResumeButton = styled(LinkR)`
     border-radius: 8px;
     text-decoration: none;
     margin-top: 10%;
-
-    &:hover {
-      color: ${hoverColor};
-      border-color: ${hoverColor};
-    }
   }
 `;

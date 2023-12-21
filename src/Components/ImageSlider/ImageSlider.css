@@ -17,6 +17,7 @@
 
 .slides {
   width: 500%;
+  height: 100%;
   max-height: 500px;
   display: flex;
 }
@@ -81,6 +82,10 @@
 
 @media (min-width: 320px) and (max-width: 568px) {
   .container {
-    display: none;
+    height: 250px;
+  }
+
+  .manual-btn {
+    width: 15%;
   }
 }

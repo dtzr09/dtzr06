@@ -24,7 +24,7 @@ function ImageSlider({ card }) {
   return (
     <div className="container">
       <div className="slider">
-        <div className="slides" >
+        <div className="slides">
           <input type="radio" name="radio-btn" id="radio1" />
           <input type="radio" name="radio-btn" id="radio2" />
           <input type="radio" name="radio-btn" id="radio3" />
