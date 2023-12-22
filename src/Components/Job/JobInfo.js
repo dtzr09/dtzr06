@@ -11,6 +11,7 @@ import {
   DescContainer,
 } from "./JobStyles.js";
 import { BiRightArrow } from "react-icons/bi";
+import { BsDashCircle } from "react-icons/bs";
 
 function JobInfo({ card }) {
   return (
@@ -21,6 +22,15 @@ function JobInfo({ card }) {
           <JobDetails>{card.duration}</JobDetails>
           <span>{card.role} </span>
         </DetailsContainer>
+        <BsDashCircle
+          style={{
+            position: "absolute",
+            right: "15px",
+            color: "#BF3131",
+            marginTop: "5px",
+          }}
+          size={20}
+        />
         <DescContainer>
           <DescList>
             {card &&

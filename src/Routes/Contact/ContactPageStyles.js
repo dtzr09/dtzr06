@@ -3,6 +3,7 @@ import { boldedColor, hoverColor, textColor } from "../../styles/variables";
 
 export const ContactContainer = styled.div`
   width: 100vw;
+  height: 100%;
 `;
 
 export const ContactWrapper = styled.div`
@@ -14,10 +15,8 @@ export const ContactWrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   line-height: 1.5;
-  margin-top: 100px;
 
   @media (min-width: 320px) and (max-width: 568px) {
-    padding: 0;
     width: 100%;
     height: 100%;
     justify-content: center;
@@ -35,7 +34,7 @@ export const ContactTitle = styled.p`
   text-align: center;
 
   @media (min-width: 320px) and (max-width: 568px) {
-    font-size: 30px;
+    font-size: 36px;
   }
 `;
 

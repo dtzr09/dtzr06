@@ -7,6 +7,7 @@ export const HomeContainer = styled.div`
   height: 100vh;
 
   @media (min-width: 320px) and (max-width: 568px) {
+    display: flex;
     width: 300px;
     height: 100vh;
     margin-bottom: 20%;
@@ -23,9 +24,10 @@ export const DetailsContainer = styled.div`
 
   @media (min-width: 320px) and (max-width: 568px) {
     text-align: center;
-    padding-top: 20%;
-    padding-left: 0;
+    margin-top: auto;
     width: 100%;
+    padding-top: 0%;
+    padding-left: 0%;
   }
 `;
 
@@ -41,7 +43,7 @@ export const TitlesWrapper = styled.div`
 
 export const TitleH1 = styled.h1`
   color: ${textColor};
-  font-size: 4rem;
+  font-size: 4.5rem;
   font-weight: 400;
 
   @media (min-width: 320px) and (max-width: 568px) {
@@ -52,18 +54,20 @@ export const TitleH1 = styled.h1`
 
 export const TitleSpan = styled.span`
   font-weight: 500;
-  font-size: 5rem;
+  font-size: 6rem;
   color: ${boldedColor};
+
   @media (min-width: 320px) and (max-width: 568px) {
-    font-size: 45px;
+    font-size: 40px;
   }
 `;
 
 export const IntroP1 = styled.p`
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: ${textColor};
 
   @media (min-width: 320px) and (max-width: 568px) {
+    font-size: 1.3rem;
     text-align: left;
     margin-top: 15px;
     max-width: 100%;
@@ -73,10 +77,11 @@ export const IntroP1 = styled.p`
 export const IntroP2 = styled.p`
   max-width: 50%;
   margin-top: 5px;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: ${textColor};
 
   @media (min-width: 320px) and (max-width: 568px) {
+    font-size: 1.3rem;
     text-align: left;
     max-width: 100%;
   }
@@ -111,7 +116,7 @@ export const ResumeButton = styled(LinkR)`
   @media (min-width: 320px) and (max-width: 568px) {
     display: block;
     position: relative;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
     padding: 8px;
     border: 1px solid ${boldedColor};

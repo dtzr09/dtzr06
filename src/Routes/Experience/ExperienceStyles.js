@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import profileImg from "../../static/profileImg.png";
 import {
   backgroundColor_1,
   backgroundColor_2,
@@ -10,7 +9,7 @@ import {
 } from "../../styles/variables";
 
 export const ExpWrapper = styled.div`
-  height: 80vh;
+  height: 100vh;
 
   @media (min-width: 320px) and (max-width: 568px) {
     height: 100%;
@@ -26,7 +25,7 @@ export const ExpContainer = styled.div`
     padding-top: 0px;
     padding-left: 0px;
     width: 380px;
-    height: fit-content;
+    height: 100%;
     margin: 0px;
   }
 `;
@@ -83,6 +82,7 @@ export const ExpLine = styled.div`
 
 export const ItemWrapper = styled.div`
   position: relative;
+
   @media (min-width: 320px) and (max-width: 568px) {
     display: flex;
     flex-direction: column;
@@ -94,7 +94,7 @@ export const Item = styled.div`
   flex-direction: row;
   padding: 20px 0px 20px 0px;
   align-items: center;
-  min-width: 200px;
+  min-width: 220px;
 
   @media (min-width: 320px) and (max-width: 568px) {
     flex-direction: column;
@@ -161,7 +161,7 @@ export const Desc = styled.div`
     flex-direction: column;
     text-align: left;
     align-items: unset;
-    font-size: 20px;
+    font-size: 22px;
     padding: 0px;
 
     > span {
@@ -185,14 +185,14 @@ export const DescList = styled.div`
       margin-top: 7px;
     }
     > p {
+      font-size: 22px;
       margin-left: 5%;
     }
   }
 `;
 export const ItemValues = styled.div`
   color: ${({ isClicked }) => (isClicked ? boldedColor_1 : textColor)};
-  color: ;
-  font-size: 18px;
+  font-size: 20px;
   cursor: pointer;
 
   &:hover {
@@ -222,30 +222,6 @@ export const SkillsBox = styled.div`
   width: fit-content;
   padding: 0.15rem 0.8rem 0.15rem 0.8rem;
   border-radius: 10px;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 500;
-`;
-
-export const PicContainer = styled.div`
-  border-radius: 10px;
-  height: fit-content;
-  width: fit-content;
-  overflow: hidden;
-  border: 3px solid #aa475c;
-  margin-bottom: 10px;
-
-  @media (min-width: 320px) and (max-width: 568px) {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10%;
-    height: 200px;
-  }
-`;
-
-export const SelfImage = styled.div`
-  background-image: url(${profileImg});
-  background-repeat: no-repeat;
-  background-position: center 30%;
-  width: 300px;
-  height: 300px;
 `;

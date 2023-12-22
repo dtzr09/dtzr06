@@ -15,7 +15,7 @@ export const CreationWrapper = styled.div`
 
   @media (min-width: 320px) and (max-width: 568px) {
     padding-bottom: 70%;
-    height: 100vh;
+    height: auto;
   }
 `;
 
@@ -32,7 +32,6 @@ export const CreationContainer = styled.div`
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    height: fit-content;
   }
 `;
 
