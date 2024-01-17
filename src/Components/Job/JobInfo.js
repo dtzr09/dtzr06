@@ -12,8 +12,9 @@ import {
 } from "./JobStyles.js";
 import { BiRightArrow } from "react-icons/bi";
 import { BsDashCircle } from "react-icons/bs";
+import { boldedColor } from "../../styles/variables.js";
 
-function JobInfo({ card }) {
+function JobInfo({ card, setOpen }) {
   return (
     <JobContainer>
       <Job>
@@ -26,10 +27,11 @@ function JobInfo({ card }) {
           style={{
             position: "absolute",
             right: "15px",
-            color: "#BF3131",
+            color: boldedColor,
             marginTop: "5px",
           }}
           size={20}
+          onClick={() => setOpen(false)}
         />
         <DescContainer>
           <DescList>

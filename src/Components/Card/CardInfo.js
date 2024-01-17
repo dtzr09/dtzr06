@@ -15,29 +15,10 @@ import {
 import { VscGithubAlt as Github } from "react-icons/vsc";
 import { MdWifiTethering } from "react-icons/md";
 import { creations } from "../../variables/creations.js";
+import { BsDashCircle } from "react-icons/bs";
+import { boldedColor } from "../../styles/variables.js";
 
-function CardInfo({ card }) {
-  const [cardKey, setcardKey] = useState(1);
-  const currentCard = creations[cardKey - 1];
-  const handleNavigation = (data) => {
-    switch (data) {
-      case "left":
-        if (cardKey > creations.length) {
-          setcardKey(1);
-        } else {
-          setcardKey(cardKey + 1);
-        }
-      case "right":
-        if (cardKey == 1) {
-          setcardKey(creations.length);
-        } else {
-          setcardKey(cardKey - 1);
-        }
-      default:
-        break;
-    }
-  };
-
+function CardInfo({ card, setOpen }) {
   return (
     <CardContainer>
       <Card>
@@ -45,7 +26,6 @@ function CardInfo({ card }) {
         <DetailsContainer>
           <CardDetails>{card?.details}</CardDetails>
           <CardLanguage>
-            <p>Tech Stack:</p>
             <ul>
               {card?.skills.map((item, index) => (
                 <li key={index}>
@@ -64,6 +44,15 @@ function CardInfo({ card }) {
               <MdWifiTethering />
             </LiveLogo>
           ) : null}
+          <BsDashCircle
+            style={{
+              position: "absolute",
+              right: "15px",
+              color: boldedColor,
+            }}
+            size={20}
+            onClick={() => setOpen(false)}
+          />
         </LogosContainer>
       </Card>
     </CardContainer>

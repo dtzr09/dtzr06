@@ -25,6 +25,7 @@ export const DetailsContainer = styled.div`
   @media (min-width: 320px) and (max-width: 568px) {
     text-align: center;
     margin-top: auto;
+    margin-bottom: 20%;
     width: 100%;
     padding-top: 0%;
     padding-left: 0%;

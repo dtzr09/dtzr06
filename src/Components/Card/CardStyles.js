@@ -25,20 +25,21 @@ export const CardContainer = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
+  padding-bottom: 10px;
 `;
 
 export const CardTitle = styled.p`
-  font-size: 40px;
+  font-size: 35px;
   color: ${boldedColor};
 
   @media (min-width: 320px) and (max-width: 568px) {
-    font-size: 35px;
+    font-size: 32px;
     margin-bottom: 10px;
   }
 `;
 
 export const CardDetails = styled.p`
-  font-size: 20px;
+  font-size: 18px;
   color: ${textColor};
 
   @media (min-width: 320px) and (max-width: 568px) {
@@ -49,7 +50,7 @@ export const CardDetails = styled.p`
 `;
 
 export const CardLanguage = styled.div`
-  width: 100%;
+  max-width: 100%;
   font-size: 18px;
   display: flex;
   flex-direction: column;
@@ -57,17 +58,14 @@ export const CardLanguage = styled.div`
   text-align: left;
   color: ${textColor};
 
-  > p {
-    font-size: 20px;
-    margin-bottom: 0px;
-  }
-
   > ul {
     list-style-type: none;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+    display: flex;
     flex-wrap: wrap;
-    grid-row-gap: 8px;
+
+    > li {
+      margin: 4px;
+    }
   }
 
   @media (min-width: 320px) and (max-width: 568px) {
@@ -85,13 +83,13 @@ export const SkillsBox = styled.div`
   width: fit-content;
   padding: 0.15rem 0.8rem 0.15rem 0.8rem;
   border-radius: 10px;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 500;
 `;
 
 export const LogosContainer = styled.div`
   padding-top: 18px;
-  font-size: 25px;
+  font-size: 22px;
   width: 10%;
   margin-left: auto;
   margin-right: auto;

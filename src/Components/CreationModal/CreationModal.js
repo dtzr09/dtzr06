@@ -21,9 +21,9 @@ function CreationModal({ card, open, setOpen, image, type }) {
           {image ? <ImageSlider card={card} /> : null}
           <InfoContainer>
             {type != "Projects" ? (
-              <CardInfo card={card} />
+              <CardInfo card={card} setOpen={setOpen} />
             ) : (
-              <JobInfo card={card} />
+              <JobInfo card={card} setOpen={setOpen} />
             )}
           </InfoContainer>
         </SliderContainer>
